@@ -3,3 +3,9 @@
 
 ### Follow
 - The Machine Learning Landscape
+    - What is ML? Why use it? Applications
+    - Types of Machine Learning Systems
+    - Main Challenges of ML
+    - Testing and Validating
+
+    

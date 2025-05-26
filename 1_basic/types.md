@@ -25,6 +25,10 @@ The chapter categorizes ML systems along several axes:
 * Support Vector Machines (SVM)
 * Neural Networks
 
+**Tasks**:
+* Classification 
+* Regression
+
 ---
 
 ### 1.3.2 **Unsupervised Learning**
@@ -45,6 +49,13 @@ The chapter categorizes ML systems along several axes:
 * Hierarchical Clustering
 * PCA (Principal Component Analysis)
 * Autoencoders
+
+**Tasks**:
+* Clustering
+* dimensionality reduction
+* anomaly detection
+* novelty detection
+* association rule learning
 
 ---
 
