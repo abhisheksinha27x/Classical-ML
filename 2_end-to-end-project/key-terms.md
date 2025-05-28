@@ -90,3 +90,59 @@ $$
 
 ---
 
+### 📉 What is **Data Snooping Bias**?
+
+**Data Snooping Bias** (also called **data leakage** or **peeking**) happens when **you use the same data to make decisions that you later evaluate using that same data** — leading to **overly optimistic and misleading results**.
+
+---
+
+### 🔍 In Simple Terms:
+
+> You "peek" at your test data or use your whole dataset to help tune your model, and then try to evaluate on the same data — so your model looks better than it actually is on truly unseen data.
+
+---
+
+### 🧠 Why It's a Problem
+
+Because it **violates the assumption** that the model is tested on **unseen, independent data**, it:
+
+* Inflates performance metrics.
+* Makes you believe the model is better than it really is.
+* Can lead to **models that fail in the real world**.
+
+---
+
+### 🧪 Common Causes of Data Snooping Bias
+
+| Situation                                                                           | Explanation                                         |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Using test set to tune hyperparameters**                                          | You’re indirectly training on the test set.         |
+| **Performing preprocessing (like scaling) on full dataset before train-test split** | Test data influences scaling parameters.            |
+| **Feature selection based on entire dataset**                                       | You're letting test info leak into the model.       |
+| **Running multiple experiments on the same test set and picking the best**          | Overfitting to the test set through selection bias. |
+
+---
+
+### ✅ How to Prevent Data Snooping Bias
+
+1. **Strictly separate**:
+
+   * Training data
+   * Validation data
+   * Test data
+
+2. Apply **all preprocessing** (e.g., scaling, imputation, feature selection) **only on training data**, and then **apply the same transform** to validation/test sets.
+
+3. Use **cross-validation** properly for evaluation and tuning.
+
+4. Use the **test set only once** — for final model evaluation.
+
+---
+
+### 📌 Summary
+
+> **Data Snooping Bias** occurs when your model indirectly learns from the data it's supposed to be evaluated on, leading to overly optimistic results.
+
+It's a **hidden but dangerous pitfall** in machine learning and should always be guarded against using **clean data separation and strict pipeline discipline**.
+
+---
