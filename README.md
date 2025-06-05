@@ -18,4 +18,5 @@
     - fine tune the model
     - launch, monitor, and maintain the system
 
-- 
+- Classification
+    
